@@ -1,3 +1,7 @@
+{% comment %} {% load custom_tags %} {% endcomment %}
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +12,12 @@
     <title>Accounting services</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
+    {% comment %} <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/aos.css"> {% endcomment %}
+    <link rel="stylesheet" href="{% static  'styles/styles.css' %}">
+    <link rel="stylesheet" href="{% static  'styles/aos.css' %}">
+
+
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css" rel="stylesheet"> -->
      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -28,18 +37,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#vacancies" id="vacanciesLink">Vacancies</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#enquiries">Enquiries</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
@@ -68,17 +75,17 @@
     <div id="carousel_slides" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/acc1.jpg" class="d-block w-100 card-img" alt="alt text">
+                <img src="{% static 'images/acc1.jpg' %}" class="d-block w-100 card-img" alt="alt text">
             </div>
             <div class="carousel-item">
-                <img src="images/acc4.jpg" class="d-block w-100 card-img" alt="alt text">
+                <img src="{% static 'images/acc4.jpg' %}" class="d-block w-100 card-img" alt="alt text">
               </div>
             <div class="carousel-item">
-                <img src="images/acc2.jpg" class="d-block w-100 card-img" alt="alt text">
+                <img src="{% static 'images/acc2.jpg' %}" class="d-block w-100 card-img" alt="alt text">
             </div>
 
             <div class="carousel-item">
-              <img src="images/acc3.jpeg" class="d-block w-100 card-img" alt="alt text">
+              <img src="{% static 'images/acc3.jpeg' %}" class="d-block w-100 card-img" alt="alt text">
           </div>
         </div>
     </div>
@@ -89,8 +96,8 @@
       <!-- <h1>About</h1> -->
       <div class="container text-center mt-5">
         
-        <span style="font-size: 16.0pt; mso-bidi-font-size: 16.0pt;">PNYN ACCOUNTANTS (PNYN) is a black owned accounting firm offering South African businesses and individual with the financial services solutions. Based in Cape Town. PNYN is equipped with qualified accountants, tax practitioner and business consultants ready and competent to assist our clients.
-          The business was formed in 2023, by the Ngubane family. This was inspired by Mr Maxwell Ngubane the first member of the family who joined the accounting profession. With experience in the accounting industry of more than 25 years both in the public and private sector, with more the 9 years of experience working as a senior finance manager at GJ Crooks Hospital, in Kwazulu-Natal, Scottburgh. This became a family tradition say his son, Phelelani Ngubane and daughter in law, Nothando Ngubane both joined the accounting sector. 
+        <span style=" color: grey; font-size: 16.0pt; mso-bidi-font-size: 16.0pt;">PNYN ACCOUNTANTS (PNYN) is a black owned accounting firm offering South African businesses and individual with the financial services solutions. Based in Cape Town. PNYN is equipped with qualified accountants, tax practitioner and business consultants ready and competent to assist our clients.
+          The business was formed in 2023, by the Ngubane family. This was inspired by Mr Maxwell Ngubane the first member of the family who joined the accounting profession. With experience in the accounting industry of more than 25 years both in the public and private sector, with more than 9 years of experience working as a senior finance manager at GJ Crooks Hospital, in Kwazulu-Natal, Scottburgh. This became a family tradition say his son, Phelelani Ngubane and daughter in law, Nothando Ngubane both joined the accounting sector. 
           </span style="font-size: 12.0pt; mso-bidi-font-size: 14.0pt;">
       </div>
     </div>
@@ -115,8 +122,8 @@
 
 
         <div class="col-lg-3 col-md-4 col-sm-12 mt-5 mb-4 toggleCard">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" data-aos="fade-up" data-aos-duration="500">
+                <div class="card-body" style="box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);">
                     <h5 class="card-title">Monthly Invoicing</h5>
                     <p class="card-text">
                         Our monthly invoicing service includes the creation and distribution of professional invoices to your clients. We ensure accuracy in billing, track payment statuses, and provide you with a comprehensive overview of your receivables. 
@@ -133,8 +140,8 @@
         </div>
 
         <div class="col-lg-3 col-md-4 col-sm-12 mt-5 mb-4 toggleCard">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" data-aos="fade-down" data-aos-duration="500">
+                <div class="card-body" style="box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);">
                     <h5 class="card-title">Cash Flow Forecasting</h5>
                     <p class="card-text">
                         Cash flow forecasting involves analyzing your past financial data to predict future cash inflows and outflows. We help you anticipate potential gaps, allowing for proactive decision-making and ensuring your business has the liquidity needed to operate smoothly.                    </p>
@@ -147,8 +154,8 @@
         </div>
 
         <div class="col-lg-3 col-md-4 col-sm-12 mt-5 mb-4 toggleCard">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" data-aos="fade-down" data-aos-duration="500">
+                <div class="card-body" style="box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);">
                     <h5 class="card-title">Individual Tax Returns</h5>
                     <p class="card-text">
                         Our Individual Tax Returns service is tailored for individuals seeking accurate and timely filing of their personal income taxes. We guide you through the process, identify eligible deductions, and maximize your tax benefits while ensuring compliance with tax laws.
@@ -162,8 +169,8 @@
         </div>
 
         <div class="col-lg-3 col-md-4 col-sm-12 mt-5 mb-4 toggleCard">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" data-aos="fade-up" data-aos-duration="500">
+                <div class="card-body" style="box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);">
                     <h5 class="card-title">VAT Returns:</h5>
                     <p class="card-text">
                         Value Added Tax (VAT) Returns can be complex, but our service simplifies the process. We handle the preparation and submission of your VAT returns, ensuring accurate reporting of input and output taxes. This helps your business maintain compliance and facilitates smooth interactions with tax authorities.
@@ -177,8 +184,8 @@
         </div>
           
         <div class="col-lg-3 col-md-4 col-sm-12 mt-5 mb-4 toggleCard">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" data-aos="flip-left" data-aos-duration="600">
+                <div class="card-body" style="box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);">
                     <h5 class="card-title">Payroll Calculation:</h5>
                     <p class="card-text">
                         Our payroll calculation service covers all aspects of employee compensation. From basic salary calculations to tax deductions and benefits administration, we ensure accurate and compliant payroll processing, saving you time and reducing the risk of errors.
@@ -192,8 +199,8 @@
         </div>
 
         <div class="col-lg-3 col-md-4 col-sm-12 mt-5 mb-4 toggleCard">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" data-aos="flip-left" data-aos-duration="600">
+                <div class="card-body" style="box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);">
                     <h5 class="card-title">Budget/Forecasts</h5>
                     <p class="card-text">
                         Our budget and forecasting services involve creating detailed financial plans aligned with your business goals. We work collaboratively with you to set realistic targets, monitor performance against these goals, and make adjustments as needed for optimal financial management.
@@ -207,8 +214,8 @@
         </div>
 
         <div class="col-lg-3 col-md-4 col-sm-12 mt-5 mb-4 toggleCard">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" data-aos="flip-left" data-aos-duration="600">
+                <div class="card-body" style="box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);">
                     <h5 class="card-title">Statement of Profit/Loss</h5>
                     <p class="card-text">
                         The Statement of Profit and Loss, also known as the Income Statement, outlines your company's revenues, expenses, and profits over a specific period. We meticulously prepare this statement to help you understand your business's profitability and identify areas for improvement.
@@ -222,8 +229,8 @@
         </div>
 
         <div class="col-lg-3 col-md-4 col-sm-12 mt-5 mb-4 toggleCard">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" data-aos="flip-left" data-aos-duration="600">
+                <div class="card-body" style="box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);">
                     <h5 class="card-title">Annual Financial Statements</h5>
                     <p class="card-text">
                         Our Annual Financial Statements service involves the preparation and presentation of comprehensive financial reports summarizing your company's financial performance over the fiscal year. These statements are crucial for stakeholders, providing a clear overview of your business's financial health.
@@ -244,7 +251,7 @@
         
       </div>
 
-      <section id="enquiries">
+      <section id="contact">
               <p>We aim to achieve market growth in this competitive accounting market and also to improve our clients satisfaction by delivering a services that is reliable and reviewed by our Professional Accountants.
         Our firm also aims to assist new established, small and medium companies with their accounting function to be sustainable at a reasonable rate.</p>
     </section>
@@ -277,14 +284,14 @@
         </form>
   
           <div class="img-container">
-            <img src="images/acc6.jpg" alt="Image description">
+            <img src="{% static 'images/acc6.jpg' %}" alt="Image description">
         </div>      
       </div>
     </div>
 
-    <section id="contact"> 
+    <!-- <section id="contact"> 
 
-    </section> 
+    </section>  -->
     
     <footer class="bg-light pt-5 pb4">
         <div class="containe text-center text-md-left">
@@ -295,37 +302,51 @@
                 </div>
 
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Business Services</h5>
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Corporate Services</h5>
                     <p>
-                        <a href="#" class="" style="text-decoration: none;">Financial Accounting</a>
+                        <a href="#" class="" style="text-decoration: none;">Formulation of company</a>
                     </p>
                     <p>
-                        <a href="#" class="" style="text-decoration: none;">Auditing</a>
+                        <a href="#" class="" style="text-decoration: none;">Shelf company</a>
                     </p>
                     <p>
-                        <a href="#" class="" style="text-decoration: none;"></a>
+                        <a href="#" class="" style="text-decoration: none;">Company search</a>
                     </p>
                     <p>
-                        <a href="#" class="" style="text-decoration: none;"></a>
+                        <a href="#" class="" style="text-decoration: none;">CIPC annual retuns</a>
                     </p>
+                    <p>
+                        <a href="#" class="" style="text-decoration: none;">CIPC Nil returns</a>
+                    </p>
+                    <p>
+                        <a href="#" class="" style="text-decoration: none;">Shares Transfers</a>
+                    </p>
+                    
                 </div>
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Industry Expertise</h5>
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">More Corporate Services</h5>
                     <p>
-                        <a href="#" class="" style="text-decoration: none;">Start ups</a>
+                        <a href="#" class="" style="text-decoration: none;">Change of director</a>
                     </p>
                     <p>
-                        <a href="#" class="" style="text-decoration: none;"></a>
+                        <a href="#" class="" style="text-decoration: none;">Change of registered office</a>
                     </p>
                     <p>
-                        <a href="#" class="" style="text-decoration: none;"></a>
+                        <a href="#" class="" style="text-decoration: none;">Additional director</a>
                     </p>
                     <p>
-                        <a href="#" class="" style="text-decoration: none;"></a>
+                        <a href="#" class="" style="text-decoration: none;">Alternation of MOI</a>
                     </p>
+                    <p>
+                        <a href="#" class="" style="text-decoration: none;">Change of Name</a>
+                    </p>
+                    <p>
+                        <a href="#" class="" style="text-decoration: none;">New set of MOI</a>
+                    </p>
+                    
                 </div>
                 <div class="col-md-4 col-lg-3 col=xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <h5 class=" mb-4 text-warning">Contact</h5>
                     <p>
                         <i class="fas fa-home mr-3">Cape town</i>
                     </p>
@@ -338,18 +359,7 @@
                     <p>
                         <i class="fas fa-print mr-3">23415678320</i>
                     </p>
-                </div>
-                <hr class="mb-4">
-                <div class="row align-items-center">
-                    <div class="col-md-7 col-lg-8">
-                        <p>
-                            Copyright @2024 All rights reserved by:
-                            <a href="#" style="text-decoration: none;">
-                                <strong class="text-warning">...Software</strong>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-md-5 col-lg-4">
+                    <div class="row-md-5 row-lg-4">
                         <div class="text-center text-md-right">
                             <ul class="list-unstyled list-inline">
                                 <li class="list-inline-item">
@@ -373,8 +383,20 @@
                         </div>
                     </div>
                 </div>
+                <hr class="mb-4">
+                <div class="row align-items-center">
+                    
+                    
+                    <div class="col-md-7 col-lg-8">
+                        <p>
+                            Copyright @2024 All rights reserved by:
+                            <a href="#" style="text-decoration: none;">
+                                <strong class="">..Software</strong>
+                            </a>
+                        </p>
+                    </div>
+                </div>
         </div>
-        
 
   </footer>
 
@@ -392,6 +414,18 @@
 <script src="js/carousel.js"></script>
 <script src="js/toggle_text.js"></script>
 <script src="js/vacancies.js"></script>
+<script src="js/aos.js"></script>
+
+<script src="{% static 'js/aos.js' %}"></script> 
+<script src="{% static 'js/vacancies.js' %}"></script> 
+<script src="{% static 'js/toggle_text.js' %}"></script> 
+<script src="{% static 'js/carousel.js' %}"></script> 
+
+
+<script>
+    AOS.init();
+</script>
+
 
 
 </body>
