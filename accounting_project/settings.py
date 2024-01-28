@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'accounting_app',
     
 ]
+AUTH_USER_MODEL = 'accounting_app.CustomUser'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -121,8 +123,13 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+# AUTH_USER_MODEL='accounting_app.CustomUser'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
